@@ -15,6 +15,6 @@ import { Test } from './test-module/test.module';
     Test
   ],
   providers: [],
-  // bootstrap: [AppComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
