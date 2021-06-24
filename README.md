@@ -27,14 +27,20 @@
 - Control the UX/UI by coordinating data between the class and the template.
 
 1. Interpolation.
-2. Template statements.
-3. Binding syntax.
-4. Property binding.
-5. Attribute, class, and style bindings.
+2. Template expressions.
+3. Template statements.
+4. Binding syntax.
+5. Property binding.
 6. Event binding.
 7. Two-way binding.
-8. Built-in directives.
-9. Template reference variables.
-10. Inputs and Outputs.
-11. Template expression operators.
-12. SVG in templates.
+8. Attribute, class, and style bindings
+9. Built-in directives
+
+- Built-in attribute directives
+- Built-in structural directives
+
+10. Template reference variables
+11. Input and output properties.
+12. Template expression operators.
+    - pipe (|)
+    - safe navigation operator ( ?. )
