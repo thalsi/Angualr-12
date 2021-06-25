@@ -30,6 +30,22 @@
 2. Template expressions.
 3. Template statements.
 4. Binding syntax.
+
+- One-way Binding:- Interpolation, Proparty, Attribute, Class, Style( data source
+  to view target)
+- One-way Binding:- Event( view target
+  to data source)
+- Two-way Binding:-Two-way
+- Data binding automatically keeps your page up-to-date based on your application's state.
+- HTML attributes and DOM properties
+
+* attributes is string value
+* attributes is not change
+* properties is boolan
+* Property and attribute comparison( boolean value is easy to read, the syntax is shorter, and a property is more performant.)
+* disabled(boolan property) property of the button's DOM element, not the attribute.
+* Remember that HTML attributes and DOM properties are different things, even when they have the same name.
+
 5. Property binding.
 6. Event binding.
 7. Two-way binding.

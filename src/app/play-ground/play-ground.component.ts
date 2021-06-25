@@ -12,6 +12,8 @@ export class PlayGroundComponent implements OnInit {
   time=1000;
   v=true;
 
+  arrayData=[{rollno:1,num:5353535353535353},{rollno:2,num:545445},{rollno:3,num:6767}];
+
   constructor(private _ref: ChangeDetectorRef) {}
 
   get displayText() {
@@ -24,7 +26,7 @@ export class PlayGroundComponent implements OnInit {
     if(this.v){
       setInterval(() => {
         if (Math.random() < 0.1) {
-          console.log('Should trigger a change detection..!'); 
+          // console.log('Should trigger a change detection..!'); 
           this.counter++;
           this.v=false;
           this._ref.detectChanges();
@@ -32,11 +34,19 @@ export class PlayGroundComponent implements OnInit {
         else {
           if(this.v){
 
-            console.log('not trigger a change detection');
+            // console.log('not trigger a change detection');
           }
         }
       }, this.time);
     }
+
+    this.arrayData.find(e=>{
+      if(e.rollno==2){
+        console.log(e.num);
+        
+      }
+    });
+
     }
 
 }

@@ -1,0 +1,17 @@
+#button {
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(97, 179, 255);
+}
+h4 {
+  text-align: center;
+  background-color: rgb(240, 255, 243);
+}
+
+p {
+  color: red;
+}
+
+.inputClass {
+  border: 2px solid red;
+  border-radius: 4px;
+}
