@@ -35,3 +35,15 @@
     <li>Tempate refernce varbile</li>
     <input type="text" #templateref><button (click)="temp(templateref)">Click</button>
 </ol>
+<div>
+    <button>{{'interepulation'}}</button>
+    <button [disabled]="condtion">Proparty banding</button>
+    <button [attr.disabled]="condtion?'disabled':null">Attrubute banding</button>
+    <button [class.buttonClass]="condtion">single Class banding</button>
+    <button [class]="'button1 button2'">Multipule string Class</button>
+    <button [class]="{button1:condtion,button2:!condtion}">multipule object class </button>
+</div>
+<div>
+    <button [style.color]="'red'">single style banding</button>
+    <button [style]="{color:'green',width: '100px'}">multipule style banding</button>
+</div>

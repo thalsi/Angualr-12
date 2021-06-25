@@ -1,7 +1,3 @@
-#button {
-  border: 2px solid rgb(0, 0, 0);
-  background-color: rgb(97, 179, 255);
-}
 h4 {
   text-align: center;
   background-color: rgb(240, 255, 243);
@@ -14,4 +10,19 @@ p {
 .inputClass {
   border: 2px solid red;
   border-radius: 4px;
+}
+
+.buttonClass {
+  margin: 5px;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(56, 202, 27);
+}
+
+.button1 {
+  color: rgb(255, 0, 0);
+  border: rgb(42, 209, 0) solid 5px;
+}
+
+.button2 {
+  background-color: rgb(251, 255, 0);
 }
