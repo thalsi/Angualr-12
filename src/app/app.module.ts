@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TemplateSyntaxModule } from './modules/Template-syntax/template-syntax.module';
 import { PlayGroundComponent } from './play-ground/play-ground.component';
 import { ListComponent } from './list/list.component';
+import { DirectivesModule } from './modules/directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ListComponent } from './list/list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TemplateSyntaxModule
+    TemplateSyntaxModule,
+    DirectivesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

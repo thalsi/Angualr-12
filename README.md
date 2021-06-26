@@ -5,6 +5,14 @@
 - MVC framework.
 - Maintainability, Productivity, Consistency
 
+### Componets
+
+- Components are the main building block for Angular applications
+
+* class
+* template
+* metadata
+
 ### 1. ngModule
 
 - It is a deacter.
@@ -19,6 +27,7 @@
 - metadata proparties in a JSON format.
 - there are lot of metadata for expamles @Components, @ngModule ,@Input, @Output..
 - @Service not a decoatator.have to use the @injecble for angualr services.
+- Decotrator where expression must evaluate to a function that will be called at runtime with information about the decorated declaration(behaviors).
 
 ### 3. Template Syntax
 
@@ -61,3 +70,29 @@
 - Property and attribute comparison( boolean value is easy to read, the syntax is shorter, and a property is more performant.)
 - disabled(boolan property) property of the button's DOM element, not the attribute.
 - Remember that HTML attributes and DOM properties are different things, even when they have the same name.
+
+### 4. Directives
+
+- Directives are classes additional behavior to elements (tempate or html).
+- common, form, router (ngIf, formGroup, routerLink)..
+- Type of Directives
+
+1. Components
+
+- directives with a template
+
+2. Attribute directives.
+
+- change the appearance or behavior of an element, component, or another directive.
+
+* ngClass
+* ngStyle
+* ngModel
+
+3. Structural directives
+
+- change the DOM layout by adding and removing DOM elements.
+
+* ngfor
+* ngIf
+* ngSwitch

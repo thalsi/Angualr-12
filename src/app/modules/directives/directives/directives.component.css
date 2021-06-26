@@ -1,0 +1,26 @@
+h4 {
+  text-align: center;
+  background-color: rgb(240, 255, 243);
+}
+
+p {
+  color: red;
+}
+
+h6 {
+  background-color: blueviolet;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+}
+
+.ngClass1 {
+  color: blueviolet;
+}
+.ngClass2 {
+  background-color: chartreuse;
+}
+.ngClass3 {
+  width: 100px;
+  height: 100px;
+}

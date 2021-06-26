@@ -1,0 +1,28 @@
+<h3>directives</h3>
+<ul>
+    <li> 1. Structural directives</li>
+    <li> 2. Attrubute directives</li>
+</ul>
+
+<p>Structural directives</p>
+<p>ngFor</p>
+<ul *ngFor="let item of list">
+    <li>{{item}}</li>
+</ul>
+<p>ngIF</p>
+<h6 *ngIf="expression" style="background-color: darkgreen;">ngIf</h6>
+<h6 *ngIf="!expression" style="background-color: cyan;">ngIf</h6>
+<p>ngSwich</p>
+<div [ngSwitch]="expression">
+    <h6 *ngSwitchCase="false" style="background-color: chartreuse;">False</h6>
+    <h6 *ngSwitchCase="true" style="background-color: crimson;">Ture</h6>
+</div>
+
+<p>Attrubute directives</p>
+<p>ngClass</p>
+<h4 [ngClass]="'ngClass1 ngClass2 ngClass3'"> String</h4>
+<h4 [ngClass]="['ngClass1', 'ngClass2', 'ngClass3']">Array</h4>
+<h4 [ngClass]="{ngClass1: 'true',ngClass3:'true'}">set Object multipule</h4>
+<h4 [ngClass]="{'ngClass1 ngClass2 ngClass3' : true}">mutiple class true</h4>
+<p>ngStyle</p>
+<h4 [ngStyle]="{color:'bule',width: expression?'100px':'300px'}">multipule style banding</h4>
