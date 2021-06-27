@@ -1,0 +1,13 @@
+
+<h4>Input and Output</h4>
+<div id="parent">
+    <p>Parent Component</p>
+    <input type="text" [(ngModel)]="ParentValue">
+    <button (click)="passData()">Random</button>
+    <p>{{childVlaue}}</p>
+</div>
+<div id="child">
+    <p>Child Component</p>
+    <app-child [random]="randomData" [ParentValue]="ParentValue"
+        (childDatas)="chidVlues($event)"></app-child>
+</div>

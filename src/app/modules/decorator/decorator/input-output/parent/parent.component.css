@@ -1,0 +1,30 @@
+h4,
+h3 {
+  text-align: center;
+  border-bottom: 6px solid red;
+  background-color: lightgrey;
+}
+#parent {
+  width: 49%;
+  height: 10%;
+  display: -webkit-inline-box;
+  border: black solid 2px;
+  background-color: rgb(255, 252, 85);
+}
+
+#child {
+  width: 49%;
+  height: 10%;
+  display: inline;
+  float: right;
+  border: black solid 2px;
+  background-color: rgb(119, 143, 253);
+}
+
+label {
+  padding: 2px;
+  font-size: medium;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  align-items: 10px;
+  background-color: rgb(245, 78, 231);
+}
