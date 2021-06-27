@@ -7,6 +7,7 @@ import { TemplateSyntaxModule } from './modules/Template-syntax/template-syntax.
 import { PlayGroundComponent } from './play-ground/play-ground.component';
 import { ListComponent } from './list/list.component';
 import { DirectivesModule } from './modules/directives/directives.module';
+import { DecoratorModule } from './modules/decorator/decorator.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DirectivesModule } from './modules/directives/directives.module';
     BrowserModule,
     AppRoutingModule,
     TemplateSyntaxModule,
-    DirectivesModule
+    DirectivesModule,
+    DecoratorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

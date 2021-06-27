@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './list/list.component';
 import { TemplateSyntaxModule } from './modules/Template-syntax/template-syntax.module';
 import { DirectivesModule } from './modules/directives/directives.module';
-
+import { DecoratorModule } from './modules/decorator/decorator.module';
 const routes: Routes = [
   {
     path:'',
@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path:'directives',
     loadChildren:()=> import('./modules/directives/directives.module').then(m => m.DirectivesModule)
+  },
+  {
+    path:'decorator',
+    loadChildren:()=> import('./modules/decorator/decorator.module').then(m => m.DecoratorModule)
   }
 ];
 
