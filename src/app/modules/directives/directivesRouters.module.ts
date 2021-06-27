@@ -5,8 +5,8 @@ import { DirectivesComponent } from "./directives/directives.component";
 const routes:Routes=[
     {
         path:'',
-        component:DirectivesComponent
-    }
+        component:DirectivesComponent,
+    },
 ];
 @NgModule({
     imports:[RouterModule.forChild(routes)],

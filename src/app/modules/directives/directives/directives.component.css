@@ -1,10 +1,22 @@
+h2 {
+  text-align: center;
+  background-color: red;
+  border: black solid 2px;
+}
 h4 {
   text-align: center;
   background-color: rgb(240, 255, 243);
 }
 
 p {
-  color: red;
+  color: blue;
+}
+
+div {
+  width: 48%;
+  margin: 10px;
+  border: 1px solid black;
+  text-align: center;
 }
 
 h6 {

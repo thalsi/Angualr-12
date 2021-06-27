@@ -1,28 +1,35 @@
-<h3>directives</h3>
+<hr>
+<h2>Directives</h2>
+<hr>
 <ul>
-    <li> 1. Structural directives</li>
-    <li> 2. Attrubute directives</li>
+    <li> 1. Component directives</li>
+    <li> 2. Structural directives</li>
+    <li> 3. Attrubute directives</li>
 </ul>
 
-<p>Structural directives</p>
-<p>ngFor</p>
-<ul *ngFor="let item of list">
-    <li>{{item}}</li>
-</ul>
-<p>ngIF</p>
-<h6 *ngIf="expression" style="background-color: darkgreen;">ngIf</h6>
-<h6 *ngIf="!expression" style="background-color: cyan;">ngIf</h6>
-<p>ngSwich</p>
-<div [ngSwitch]="expression">
-    <h6 *ngSwitchCase="false" style="background-color: chartreuse;">False</h6>
-    <h6 *ngSwitchCase="true" style="background-color: crimson;">Ture</h6>
+<div  style="display:inline-block;float: right;">
+    <p>Structural directives</p>
+    <p>ngFor</p>
+    <ul *ngFor="let item of list">
+        <li style="text-align: left;">{{item}}</li>
+    </ul>
+    <p>ngIF</p>
+    <h6 *ngIf="expression" style="background-color: darkgreen;">ngIf</h6>
+    <h6 *ngIf="!expression" style="background-color: cyan;">ngIf</h6>
+    <p>ngSwich</p>
+    <container [ngSwitch]="expression">
+        <h6 *ngSwitchCase="false" style="background-color: chartreuse;">False</h6>
+        <h6 *ngSwitchCase="true" style="background-color: crimson;">Ture</h6>
+    </container>
+</div>
+<div>
+    <p>Attrubute directives</p>
+    <p>ngClass</p>
+    <h4 [ngClass]="'ngClass1 ngClass2 ngClass3'"> String</h4>
+    <h4 [ngClass]="['ngClass1', 'ngClass2', 'ngClass3']">Array</h4>
+    <h4 [ngClass]="{ngClass1: 'true',ngClass3:'true'}">set Object multipule</h4>
+    <h4 [ngClass]="{'ngClass1 ngClass2 ngClass3' : true}">mutiple class true</h4>
+    <p>ngStyle</p>
+    <h4 [ngStyle]="{color:'bule',width: expression?'300px':'600px'}">multipule style banding</h4>
 </div>
 
-<p>Attrubute directives</p>
-<p>ngClass</p>
-<h4 [ngClass]="'ngClass1 ngClass2 ngClass3'"> String</h4>
-<h4 [ngClass]="['ngClass1', 'ngClass2', 'ngClass3']">Array</h4>
-<h4 [ngClass]="{ngClass1: 'true',ngClass3:'true'}">set Object multipule</h4>
-<h4 [ngClass]="{'ngClass1 ngClass2 ngClass3' : true}">mutiple class true</h4>
-<p>ngStyle</p>
-<h4 [ngStyle]="{color:'bule',width: expression?'100px':'300px'}">multipule style banding</h4>
