@@ -6,6 +6,7 @@ import { ParentComponent } from './decorator/input-output/parent/parent.componen
 import { ChildComponent } from './decorator/input-output/child/child.component';
 import { FormsModule } from '@angular/forms';
 import { ViewchildComponent } from './decorator/viewchild/viewchild.component';
+import { ViewChildComponent } from './decorator/viewchild/view-child/view-child.component';
 
 
 @NgModule({
@@ -13,12 +14,13 @@ import { ViewchildComponent } from './decorator/viewchild/viewchild.component';
     DecoratorComponent,
     ParentComponent,
     ChildComponent,
-    ViewchildComponent
+    ViewchildComponent,
+    ViewChildComponent
   ],
   imports: [
     CommonModule,
     DecoratorRouterModule,
-    FormsModule
+    FormsModule,
   ]
 })
 export class DecoratorModule { }

@@ -1,13 +1,15 @@
 
 <h4>Input and Output</h4>
-<div id="parent">
-    <p>Parent Component</p>
-    <input type="text" [(ngModel)]="ParentValue">
-    <button (click)="passData()">Random</button>
-    <p>{{childVlaue}}</p>
-</div>
-<div id="child">
-    <p>Child Component</p>
-    <app-child [random]="randomData" [ParentValue]="ParentValue"
-        (childDatas)="chidVlues($event)"></app-child>
+<div  class="flex-container">
+    <div id="parent">
+        <h6>Parent Component</h6>
+        <input type="text" [(ngModel)]="ParentValue">
+        <button (click)="passData()">Random</button>
+        <p> Child pass Value:-{{childVlaue}}</p>
+    </div>
+    <div id="child">
+        <h6>Child Component</h6>
+        <app-child [random]="randomData" [ParentValue]="ParentValue"
+            (childDatas)="chidVlues($event)"></app-child>
+    </div>       
 </div>
