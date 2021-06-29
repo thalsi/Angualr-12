@@ -12,18 +12,14 @@
 </div>
 
 <h4>View Child - Element</h4>
-<div class="flex-container" >
-    <div>
-        <h6>Element</h6>
+
+<div class="flex-container">
+    <div #viewChildElement>
+        <h6>Element child</h6>
+        <p>chaild element Data here..</p>
     </div>
-    <div class="flex-container">
-        <div #viewChildElement>
-            <h6>Element child</h6>
-            <p>chaild element Data here..</p>
-        </div>
-        <div>
-            <h6>Elemnt Parent</h6>
-            <p>Child value:{{ elementValue }}</p>
-        </div>
+    <div>
+        <h6>Elemnt Parent</h6>
+        <p>Child value:{{ elementValue }}</p>
     </div>
 </div>
