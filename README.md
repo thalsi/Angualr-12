@@ -35,6 +35,14 @@
 3. Methord Decorators- @HostListaner
 4. Parameter Decorators- @Inject
 
+- Decorators
+
+1. @ngModule - Supplaying confication metadata.
+2. @Component- identifies the class it as a component class, and specifies its metadata
+3. @Input - Parent to Child share data.
+4. @Output - Child to Parent share data.
+5. @ViewChild - access and manipulate DOM elements, directives and components
+
 ## 3. MetaData
 
 - MetaData tells the angular on how to process typescrpit class.

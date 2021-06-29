@@ -1,4 +1,4 @@
-<h4>View Child</h4>
+<h4>View Child - Component</h4>
 <div  class="flex-container">
     <div>
         <h6>Parent Component</h6>
@@ -8,5 +8,22 @@
     <div>
         <h6>Child Component</h6>
         <app-view-child></app-view-child>
+    </div>
+</div>
+
+<h4>View Child - Element</h4>
+<div class="flex-container" >
+    <div>
+        <h6>Element</h6>
+    </div>
+    <div class="flex-container">
+        <div #viewChildElement>
+            <h6>Element child</h6>
+            <p>chaild element Data here..</p>
+        </div>
+        <div>
+            <h6>Elemnt Parent</h6>
+            <p>Child value:{{ elementValue }}</p>
+        </div>
     </div>
 </div>
