@@ -118,6 +118,13 @@
 * ngIf
 * ngSwitch
 
+4. Custom directive
+
+- extend the functionality of HTML
+
+1. Custom Attribute Directive
+2. Custom Structural Directive
+
 ## 6. Share data between Componets
 
 1. Parent to Child: @Input

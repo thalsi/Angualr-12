@@ -5,31 +5,45 @@
     <li> 1. Component directives</li>
     <li> 2. Structural directives</li>
     <li> 3. Attrubute directives</li>
+    <li> 4. Custom directives</li>
 </ul>
-
-<div  style="display:inline-block;float: right;">
-    <p>Structural directives</p>
-    <p>ngFor</p>
-    <ul *ngFor="let item of list">
-        <li style="text-align: left;">{{item}}</li>
-    </ul>
-    <p>ngIF</p>
-    <h6 *ngIf="expression" style="background-color: darkgreen;">ngIf</h6>
-    <h6 *ngIf="!expression" style="background-color: cyan;">ngIf</h6>
-    <p>ngSwich</p>
-    <container [ngSwitch]="expression">
-        <h6 *ngSwitchCase="false" style="background-color: chartreuse;">False</h6>
-        <h6 *ngSwitchCase="true" style="background-color: crimson;">Ture</h6>
-    </container>
+<div  class="flex-container">
+    <div>
+        <h4>Structural directives</h4>
+        <p>ngFor</p>
+        <ul *ngFor="let item of list">
+            <li style="text-align: left;">{{item}}</li>
+        </ul>
+        <h6>ngIF</h6>
+        <p *ngIf="expression" style="background-color: darkgreen;">ngIf</p>
+        <p *ngIf="!expression" style="background-color: cyan;">ngIf</p>
+        <h6>ngSwich</h6>
+        <container [ngSwitch]="expression">
+            <p *ngSwitchCase="false" style="background-color: chartreuse;">False</p>
+            <p *ngSwitchCase="true" style="background-color: crimson;">Ture</p>
+        </container>
+    </div>
+    <div>
+        <h4>Attrubute directives</h4>
+        <h6>ngClass</h6>
+        <p [ngClass]="'ngClass1 ngClass2 ngClass3'"> String</p>
+        <p [ngClass]="['ngClass1', 'ngClass2', 'ngClass3']">Array</p>
+        <p [ngClass]="{ngClass1: !expression,ngClass2:!expression}">set Object multipule</p>
+        <p [ngClass]="{'ngClass1 ngClass2 ' : expression}">mutiple class true</p>
+        <h6>ngStyle</h6>
+        <p [ngStyle]="{color:'bule',width: expression?'300px':'600px'}">multipule style banding</p>
+    </div>
+    
 </div>
-<div>
-    <p>Attrubute directives</p>
-    <p>ngClass</p>
-    <h4 [ngClass]="'ngClass1 ngClass2 ngClass3'"> String</h4>
-    <h4 [ngClass]="['ngClass1', 'ngClass2', 'ngClass3']">Array</h4>
-    <h4 [ngClass]="{ngClass1: 'true',ngClass3:'true'}">set Object multipule</h4>
-    <h4 [ngClass]="{'ngClass1 ngClass2 ngClass3' : true}">mutiple class true</h4>
-    <p>ngStyle</p>
-    <h4 [ngStyle]="{color:'bule',width: expression?'300px':'600px'}">multipule style banding</h4>
-</div>
 
+<h4>Custom directives</h4>
+<div class="flex-container">
+    <div>
+        <h6>Cumstom Attribute </h6>
+        <p appCustomAttribute>Cumstom Attribute p tage</p>
+    </div>
+    <div>
+        <h6>Cumstom Structeral </h6>
+        <p [appCustomStructer]="expression">Cumstom Structeral p tag</p>
+    </div>
+</div>
