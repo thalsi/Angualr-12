@@ -37,11 +37,12 @@
 
 - Decorators
 
-1. @ngModule - Supplaying confication metadata.
-2. @Component - identifies the class it as a component class, and specifies its metadata
-3. @Input - Parent to Child share data.
-4. @Output - Child to Parent share data.
-5. @ViewChild - access and manipulate DOM elements, directives and components
+1. @ ngModule - Supplaying confication metadata.
+2. @ Component - identifies the class it as a component class, and specifies its metadata
+3. @ Input - Parent to Child share data.
+4. @ Output - Child to Parent share data.
+5. @ ViewChild - access and manipulate DOM elements, directives and components (multiple not posbblie use viewChildern)
+6. @ ViewChildren - Returns the specified elements or directives from the view DOM as QueryList
 
 ## 3. MetaData
 

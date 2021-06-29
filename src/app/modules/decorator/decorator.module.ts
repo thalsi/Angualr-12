@@ -7,6 +7,8 @@ import { ChildComponent } from './decorator/input-output/child/child.component';
 import { FormsModule } from '@angular/forms';
 import { ViewchildComponent } from './decorator/viewchild/viewchild.component';
 import { ViewChildComponent } from './decorator/viewchild/view-child/view-child.component';
+import { ViewChildrenComponent } from './decorator/view-children/view-children.component';
+import { ChildrenComponent } from './decorator/view-children/children/children.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { ViewChildComponent } from './decorator/viewchild/view-child/view-child.
     ParentComponent,
     ChildComponent,
     ViewchildComponent,
-    ViewChildComponent
+    ViewChildComponent,
+    ViewChildrenComponent,
+    ChildrenComponent
   ],
   imports: [
     CommonModule,

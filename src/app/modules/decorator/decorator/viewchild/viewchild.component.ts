@@ -28,7 +28,7 @@ export class ViewchildComponent implements OnInit,AfterViewInit {
   }
 
   ngAfterViewInit(){
-    console.log(this.childElement);
+    // console.log(this.childElement);
 
     //use this or promes
     setTimeout(() => {
