@@ -9,6 +9,11 @@ import { ViewchildComponent } from './decorator/viewchild/viewchild.component';
 import { ViewChildComponent } from './decorator/viewchild/view-child/view-child.component';
 import { ViewChildrenComponent } from './decorator/view-children/view-children.component';
 import { ChildrenComponent } from './decorator/view-children/children/children.component';
+import { CustomDirectiveComponent } from './decorator/custom-directive/custom-directive.component';
+import { AttributeDirective } from './decorator/custom-directive/custom-attribute/attribute.directive';
+import { StructerDirective } from './decorator/custom-directive/custom-structer/structer.directive';
+import { HostBandAndHostListenerComponent } from './decorator/host-band-and-host-listener/host-band-and-host-listener.component';
+import { HostBandingAndListernerDirective } from './decorator/host-band-and-host-listener/custom/host-banding-and-listerner.directive';
 
 
 @NgModule({
@@ -19,7 +24,12 @@ import { ChildrenComponent } from './decorator/view-children/children/children.c
     ViewchildComponent,
     ViewChildComponent,
     ViewChildrenComponent,
-    ChildrenComponent
+    ChildrenComponent,
+    CustomDirectiveComponent,
+    AttributeDirective,
+    StructerDirective,
+    HostBandAndHostListenerComponent,
+    HostBandingAndListernerDirective
   ],
   imports: [
     CommonModule,
