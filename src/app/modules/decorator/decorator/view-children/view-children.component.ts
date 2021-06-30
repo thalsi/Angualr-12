@@ -25,8 +25,6 @@ export class ViewChildrenComponent implements OnInit,AfterViewInit {
     
     this.childern.toArray().forEach((e)=>{
       if(e.item.name=='Amal'){
-        console.log('work');
-        
        setTimeout(() => {
         e.color="Violet";
        }, 0);

@@ -14,6 +14,8 @@ import { AttributeDirective } from './decorator/custom-directive/custom-attribut
 import { StructerDirective } from './decorator/custom-directive/custom-structer/structer.directive';
 import { HostBandAndHostListenerComponent } from './decorator/host-band-and-host-listener/host-band-and-host-listener.component';
 import { HostBandingAndListernerDirective } from './decorator/host-band-and-host-listener/custom/host-banding-and-listerner.directive';
+import { ContentChildComponent } from './decorator/content-child/content-child.component';
+import { ContChildComponent } from './decorator/content-child/cont-child/cont-child.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { HostBandingAndListernerDirective } from './decorator/host-band-and-host
     AttributeDirective,
     StructerDirective,
     HostBandAndHostListenerComponent,
-    HostBandingAndListernerDirective
+    HostBandingAndListernerDirective,
+    ContentChildComponent,
+    ContChildComponent,
   ],
   imports: [
     CommonModule,
