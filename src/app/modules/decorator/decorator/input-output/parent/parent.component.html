@@ -1,14 +1,14 @@
 
-<h4>Input and Output</h4>
+<h3>Input and Output</h3>
 <div  class="flex-container">
     <div id="parent">
-        <h6>Parent Component</h6>
+        <h4>Parent Component</h4>
         <input type="text" [(ngModel)]="ParentValue">
         <button (click)="passData()">Random</button>
         <p> Child pass Value:-{{childVlaue}}</p>
     </div>
     <div id="child">
-        <h6>Child Component</h6>
+        <h4>Child Component</h4>
         <app-child [random]="randomData" [ParentValue]="ParentValue"
             (childDatas)="chidVlues($event)"></app-child>
     </div>       
