@@ -73,6 +73,12 @@
 - @HostBinding lets you set properties on the element or component that hosts the directive
 - @HostListener lets you listen for events on the host element or component.
 
+9. @ ContentChild and @ ContentChildren
+
+- ContentChild is used to select projected content.
+- ContentChild get access to an element in the content of the component or directive.
+- ContentChild has an equivalent decorator to select multiple elements.
+
 ## 3. MetaData
 
 - MetaData tells the angular on how to process typescrpit class.
@@ -161,3 +167,9 @@
 2. Child to Parent: @Output() and EventEmitter
 3. Child to Parent: @ViewChild
 4. sibling: Use Serviecs Unrelated Components
+
+## 7. Element
+
+1. ng-container - hold directives without creating an HTML element.
+2. ng-content - project content inside a component template.
+3. ng-template - render the content manually.doesn't render anything by default.
