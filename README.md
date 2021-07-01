@@ -170,6 +170,24 @@
 
 ## 7. Element
 
+- Dom Element
+
 1. ng-container - hold directives without creating an HTML element.
 2. ng-content - project content inside a component template.
 3. ng-template - render the content manually.doesn't render anything by default.
+
+## 8. Lifecycle hooks
+
+- number of methods called in a sequence to execute a component at specific moments is known as lifecycle hook.
+- Interface is a fundamental instrument to hook into the lifecycle
+- Interface is “AfterViewInit,” and the method for this is ” ngAfterViewInit.”
+
+1. Constructor()
+2. ngOnChanges()
+3. ngOnInit()
+4. ngDoCheck()
+5. ngAfterContentInit()
+6. ngAfterContentChecked()
+7. ngAfterViewInit()
+8. ngAfterViewChecked()
+9. ngOnDestroy()

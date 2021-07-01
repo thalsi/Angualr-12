@@ -4,6 +4,8 @@ import { ListComponent } from './list/list.component';
 import { TemplateSyntaxModule } from './modules/Template-syntax/template-syntax.module';
 import { DirectivesModule } from './modules/directives/directives.module';
 import { DecoratorModule } from './modules/decorator/decorator.module';
+import { LifeCycleHooksModule } from './modules/life-cycle-hooks/life-cycle-hooks.module';
+
 const routes: Routes = [
   {
     path:'',
@@ -20,6 +22,10 @@ const routes: Routes = [
   {
     path:'decorator',
     loadChildren:()=> import('./modules/decorator/decorator.module').then(m => m.DecoratorModule)
+  },
+  {
+    path:'life-cycle',
+    loadChildren:()=> import('./modules/life-cycle-hooks/life-cycle-hooks.module').then(m => m.LifeCycleHooksModule)
   }
 ];
 

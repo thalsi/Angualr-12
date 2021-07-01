@@ -8,6 +8,9 @@ import { PlayGroundComponent } from './play-ground/play-ground.component';
 import { ListComponent } from './list/list.component';
 import { DirectivesModule } from './modules/directives/directives.module';
 import { DecoratorModule } from './modules/decorator/decorator.module';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import { LifeCycleHooksModule } from './modules/life-cycle-hooks/life-cycle-hooks.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,11 @@ import { DecoratorModule } from './modules/decorator/decorator.module';
     AppRoutingModule,
     TemplateSyntaxModule,
     DirectivesModule,
-    DecoratorModule
+    DecoratorModule,
+    LifeCycleHooksModule,
+    
+    NgSelectModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
