@@ -182,12 +182,44 @@
 - Interface is a fundamental instrument to hook into the lifecycle
 - Interface is “AfterViewInit,” and the method for this is ” ngAfterViewInit.”
 
-1. Constructor()
-2. ngOnChanges()
-3. ngOnInit()
-4. ngDoCheck()
-5. ngAfterContentInit()
-6. ngAfterContentChecked()
-7. ngAfterViewInit()
-8. ngAfterViewChecked()
-9. ngOnDestroy()
+1. Constructor() -One time
+
+- one Time Call
+- constructor is a special method which will be called whenever we create new objects
+- generally used of initializing the class members
+
+2. ngOnChanges() -Every Time
+
+- handle the changes.
+- @input poparty change
+- changed property name to a SimpleChange object, which holds the current and previous property values
+
+3. ngOnInit() -One time
+
+- after the constructor is called and all the variables are initialized.
+
+4. ngDoCheck() -Every Time
+
+- becarefully handile
+- any change working start this methord infintiy call.
+- First parent after child after all componet.(app componet all paces work this ngDoCheck())
+- each time anything that can trigger change detection has fired (e.g. click handlers, HTTP requests, route changes, etc…). This lifecycle hook is mostly used for debug purposes;
+
+5. ngAfterContentInit()-one Time
+
+- This is called after components external content(through ng-content) has been initialized.
+
+6. ngAfterContentChecked() -Every Time
+
+- fully initialized the component/directive's content.
+
+7. ngAfterViewInit() -one Time
+
+- Fully initialized all content of a directive.
+- First Child after parent
+
+8. ngAfterViewChecked() -Every Time
+
+- method that is invoked immediately after the default change detector has completed one change-check cycle for a component's view.
+
+9. ngOnDestroy() -one time

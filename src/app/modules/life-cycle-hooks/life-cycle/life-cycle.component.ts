@@ -1,36 +1,31 @@
-import { Component, DoCheck, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, DoCheck, OnChanges, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { HooksComponent } from './hooks/hooks.component';
 
 @Component({
   selector: 'app-life-cycle',
   templateUrl: './life-cycle.component.html',
   styleUrls: ['./life-cycle.component.css']
 })
-export class LifeCycleComponent implements OnInit,OnChanges,DoCheck,OnDestroy {
-  data:string='';
-  list=['abc','amal','aji','anu'];
+export class LifeCycleComponent implements OnInit,DoCheck,AfterContentInit {
+  binding:string='Angualrr';
+  expression:boolean=false;
+
   constructor() {
-    console.log('constructor');
   }
 
-  ngOnChanges(){
-    console.log('ngOnchange');
-  }
-  
-  ngOnInit(): void {
-    console.log('ngOnInit');
-    let i=0;
-    setInterval(()=>{
-      this.data=this.list[i];
-      i++;
-    },3000)
+  ngOnInit():void{
   }
 
   ngDoCheck(){
-    console.log('ngDocheck');
+    console.log('PARENT-->ngDoCheck');
   }
 
-  ngOnDestroy(){
-    console.log('ngOnDestroy'); 
+  ngAfterContentInit(){
+    console.log('PARENT-->ngAfterContentInit');
+  }
+
+  showing(){
+    this.expression=!this.expression;
   }
 
 }

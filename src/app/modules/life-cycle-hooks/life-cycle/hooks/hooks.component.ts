@@ -1,32 +1,49 @@
-import { Component, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChange, SimpleChanges } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input, OnChanges, OnDestroy, OnInit, SimpleChange, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-hooks',
   templateUrl: './hooks.component.html',
   styleUrls: ['./hooks.component.css']
 })
-export class HooksComponent implements OnInit,OnChanges,DoCheck,OnDestroy  {
-  @Input() data:any;
+export class HooksComponent implements OnInit,OnDestroy,OnChanges,DoCheck,AfterViewInit,AfterViewChecked,AfterContentInit  {
+  @Input() name:string='';
+  data:any=null;
   constructor() {
-    console.log('Child...constructor');
+    console.log('CHILD-->constructor');
   }
 
-  ngOnChanges(simple:SimpleChanges){
-    console.log(simple);
-    
-    console.log('Child...ngOnchange');
+  ngOnChanges(){
+    console.log('CHILD-->ngOnChanges');
   }
-  
+
   ngOnInit(): void {
-    console.log('Child...ngOnInit');
+    console.log('CHILD-->ngOnInit');
+    // this.data=setInterval(()=>{
+    //   // console.log(new Date());
+    // },1000);
   }
 
   ngDoCheck(){
-    console.log('Child...ngDocheck');
+    console.log('CHILD-->ngDoCheck');
+  }
+
+  ngAfterContentInit(){
+    console.log('CHILD-->ngAfterContentInit');
+  }
+
+  ngAfterViewInit(){
+    console.log('CHILD-->ngAfterViewInit');
+  }
+
+  ngAfterViewChecked(){
+    console.log('CHILD-->ngAfterViewChecked');
   }
 
   ngOnDestroy(){
-    console.log('Child...ngOnDestroy'); 
+    if(this.data){
+      clearInterval(this.data);
+    }
+    console.log('CHILD-->ngOnDestroy'); 
   }
 
 }

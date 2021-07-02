@@ -1,2 +1,6 @@
 <h2>Life Cycle hooks</h2>
-<app-hooks [data]="data"></app-hooks>
+<app-hooks *ngIf="expression" [name]="binding">
+    <p>COntent pass</p>
+</app-hooks>
+<input type="text" [(ngModel)]="binding">
+<button (click)="showing()">Click</button>
