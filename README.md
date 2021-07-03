@@ -174,7 +174,7 @@
 
 1. ng-container - hold directives without creating an HTML element.
 2. ng-content - project content inside a component template.
-3. ng-template - render the content manually.doesn't render anything by default.
+3. ng-template - render the content manually.doesn't render anything by default.only stucteral directives for use
 
 ## 8. Lifecycle hooks
 
@@ -223,3 +223,10 @@
 - method that is invoked immediately after the default change detector has completed one change-check cycle for a component's view.
 
 9. ngOnDestroy() -one time
+
+## 9. Services
+
+- data and functinally reusable.
+- Easy data access and manipulation
+- Share data across one or multiple components
+-

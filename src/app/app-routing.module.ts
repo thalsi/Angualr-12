@@ -5,6 +5,7 @@ import { TemplateSyntaxModule } from './modules/Template-syntax/template-syntax.
 import { DirectivesModule } from './modules/directives/directives.module';
 import { DecoratorModule } from './modules/decorator/decorator.module';
 import { LifeCycleHooksModule } from './modules/life-cycle-hooks/life-cycle-hooks.module';
+import { ServModule } from './modules/services/serv.module';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:'life-cycle',
     loadChildren:()=> import('./modules/life-cycle-hooks/life-cycle-hooks.module').then(m => m.LifeCycleHooksModule)
+  },
+  {
+    path:'serveces',
+    loadChildren:()=> import('./modules/services/serv.module').then(m => m.ServModule)
   }
 ];
 
