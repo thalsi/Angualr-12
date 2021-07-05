@@ -1,0 +1,17 @@
+<!--Using items input-->
+
+<div class="card">
+    <div class="card-body">
+        <ng-select [items]="cars" 
+           bindLabel="name" 
+           bindValue="id" 
+           [(ngModel)]="selectedCar">
+</ng-select>
+    </div>
+</div>
+
+<ng-select [items]="cars" 
+bindLabel="name" 
+bindValue="id" 
+[(ngModel)]="selectedCar">
+</ng-select>
