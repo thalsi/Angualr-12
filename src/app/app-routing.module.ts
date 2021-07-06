@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path:'serveces',
     loadChildren:()=> import('./modules/services/serv.module').then(m => m.ServModule)
+  },
+  {
+    path:'observables',
+    loadChildren:()=> import('./modules/observables/observables.module').then(m => m.ObservablesModule)
   }
 ];
 

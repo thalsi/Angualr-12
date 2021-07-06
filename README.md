@@ -229,4 +229,27 @@
 - data and functinally reusable.
 - Easy data access and manipulation
 - Share data across one or multiple components
--
+
+## 10. Observables
+
+- sequences of data which is emitted asynchronously over period of time.
+- angualr use Observables most asyc opertions.
+  1. http
+  2. Routing
+  3. Event handing
+- Observer are just objects with three callbacks
+- Observer is keep traking observable
+- Observer is continuously listeing observable use three methords
+  1. next()
+  2. error()
+  3. complete()
+- third-party library called Reactive Extensions (RxJS)
+- Observables help you pass data asynchronously and are great for calling on an API
+- They are similar to promises
+- Promises execute once and then are done.Observable continue to be observed after the event occurs
+- Promises cannot be cancelled
+- RxJs provides a method called “pipe” to interact with streams
+
+1. map
+2. fillter
+3. subject

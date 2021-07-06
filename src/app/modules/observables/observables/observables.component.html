@@ -1,0 +1,14 @@
+<h2>Observables</h2>
+<div class="flex-container">
+    <div>
+        <h4>Parent</h4>
+        {{value}}
+        
+    <p *ngIf="expression" style="background-color: green;">Activation</p>
+    <p *ngIf="!expression" style="background-color: red;">Deactive</p>
+    </div>
+    <div>
+        <h4>Child</h4>
+        <app-child></app-child>
+    </div>
+</div>

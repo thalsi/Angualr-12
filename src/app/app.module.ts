@@ -12,6 +12,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
 import { LifeCycleHooksModule } from './modules/life-cycle-hooks/life-cycle-hooks.module';
 import { ServModule } from './modules/services/serv.module';
+import { ObservablesModule } from './modules/observables/observables.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ServModule } from './modules/services/serv.module';
     DecoratorModule,
     LifeCycleHooksModule,
     ServModule,
+    ObservablesModule,
     
     NgSelectModule,
     FormsModule
