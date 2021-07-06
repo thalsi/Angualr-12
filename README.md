@@ -252,4 +252,4 @@
 
 1. map
 2. fillter
-3. subject
+3. subject - communcate croess component
