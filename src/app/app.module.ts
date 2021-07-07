@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { LifeCycleHooksModule } from './modules/life-cycle-hooks/life-cycle-hooks.module';
 import { ServModule } from './modules/services/serv.module';
 import { ObservablesModule } from './modules/observables/observables.module';
+import { HttpTryModules } from './modules/http/http-try.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ObservablesModule } from './modules/observables/observables.module';
     LifeCycleHooksModule,
     ServModule,
     ObservablesModule,
+    HttpTryModules,
     
     NgSelectModule,
     FormsModule

@@ -6,6 +6,7 @@ import { DirectivesModule } from './modules/directives/directives.module';
 import { DecoratorModule } from './modules/decorator/decorator.module';
 import { LifeCycleHooksModule } from './modules/life-cycle-hooks/life-cycle-hooks.module';
 import { ServModule } from './modules/services/serv.module';
+import { HttpTryModules } from './modules/http/http-try.module';
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path:'observables',
     loadChildren:()=> import('./modules/observables/observables.module').then(m => m.ObservablesModule)
+  },
+  {
+    path:'http',
+    loadChildren:()=> import('./modules/http/http-try.module').then(m => m.HttpTryModules)
   }
 ];
 

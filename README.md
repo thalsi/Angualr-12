@@ -253,3 +253,10 @@
 1. map
 2. fillter
 3. subject - communcate croess component
+
+## 11. Http
+
+- HTTP is a protocol (protocol is systm rule that define how data is exchanged)
+- OSI modal Application layout
+- http -Hyper Text Transfer Protocol
+- communication between web clients and servers
