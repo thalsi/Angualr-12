@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
-import { EmitService } from './emit.service';
+import { EmitService } from './servers/emit.service';
+
 
 @Component({
   selector: 'app-observables',
@@ -18,6 +19,7 @@ export class ObservablesComponent implements OnInit ,OnDestroy{
   constructor(private emitService:EmitService) { }
 
   ngOnInit(): void {
+    //one
     console.log("sync start");
     const observable = new Observable (sub=>{
       sub.next('observer starting');
@@ -33,6 +35,8 @@ export class ObservablesComponent implements OnInit ,OnDestroy{
     })
     console.log("sync End");
 
+
+    //two
     console.log("Async stating");
     this.myObservable= new Observable(sub=>{
       sub.next('hi 1')
@@ -57,7 +61,7 @@ export class ObservablesComponent implements OnInit ,OnDestroy{
     })
     console.log("Async End");
 
-
+    //three
     this.serverObr= new Observable(obv=>{
       let count:number=0;
       setInterval(()=>{
@@ -67,8 +71,7 @@ export class ObservablesComponent implements OnInit ,OnDestroy{
     })
 
     this.serverObr.pipe(
-      map((x:any)=>
-        {
+      map((x:any)=>{
           return 'sever value:'+x;
         }
       )
@@ -78,9 +81,25 @@ export class ObservablesComponent implements OnInit ,OnDestroy{
 
     );
 
+    //four
     this.emitService.data.subscribe((x:any)=>{
       this.expression=x;
     });
+
+    //five
+
+    const observe:Observable<number>= of(33,44,55,66);
+
+    const myObserver={
+      next:(x:any)=>{
+        console.log('angualr --><<<'+x)
+        
+      },error:(err:any) =>{console.log(err)},
+      
+      complete: () => console.log('Observer got a complete notification'),
+    }
+
+    observe.subscribe(myObserver);
 
   }
 

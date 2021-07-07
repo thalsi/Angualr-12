@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmitService } from '../emit.service';
+import { EmitService } from '../servers/emit.service';
 
 @Component({
   selector: 'app-child',
@@ -11,10 +11,12 @@ export class ChildComponent implements OnInit {
   constructor(private emitService:EmitService) { }
 
   ngOnInit(): void {
+    this.emitService.getdata().subscribe((res:any)=>{
+      
+    });
   }
 
   me(){
-    
     this.value=!this.value;
     this.emitService.activeMe(this.value);
   }
