@@ -260,3 +260,11 @@
 - OSI modal Application layout
 - http -Hyper Text Transfer Protocol
 - communication between web clients and servers
+- CRUD operation
+- HTTP verbs
+
+1. POST
+2. GET
+3. PUT
+4. PATCH
+5. DELETE

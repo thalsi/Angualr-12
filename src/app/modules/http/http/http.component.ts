@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServerService } from '../server/server.service';
 
 @Component({
   selector: 'app-http',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HttpComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _server:ServerService) { }
 
   ngOnInit(): void {
   }
 
+  postMethord(){
+    this._server.psot().subscribe((res)=>{
+      console.log(res);
+    });
+  }
 }
