@@ -1,0 +1,38 @@
+<h4>Form</h4>
+<form #tempform="ngForm" (ngSubmit)="submited(tempform)"  style="background-color: burlywood;">
+    <label for="">Name</label>
+        <input type="text" name="userName" value="puver html felid">
+        <input type="text" name="userName" ngModel>
+        <input type="text" name="userName" ngModel>
+        <input type="text" name="password" [ngModel]="'Jone David'">
+        <input type="text" name="city" [(ngModel)]="city">
+    <label for="">Gender</label>
+        <input type="radio" name="gender" id="male" value="male" ngModel> Male
+        <input type="radio" name="gender" id="female" value="female" ngModel> Female   
+    <label for="">Country</label>
+        <select name="country" ngModel>
+            <option [value]="item?.name" *ngFor="let item of countryList"> {{item?.name}} </option>
+        </select>    
+
+    <button type="submit">Sumbit</button>
+</form>
+
+<p>
+    <span>Value : {{tempform.value | json }}</span>
+    <span>Valid : {{tempform.valid}}</span>
+    <span>Touched : {{tempform.touched  }} </span>
+    <span>Submitted : {{tempform.submitted  }} </span>
+</p>
+
+
+<h4>Valudation and error handling ui</h4>
+
+<form #temp2="ngForm" (ngSubmit)="submited2(temp2)">
+    <input type="text" name="second" ngModel>
+    <input type="text" name="second" ngModel>
+    <input type="text" name="frist" ngModel required >
+    <input type="text" name="email" ngModel required #email="ngModel" >
+        <p *ngIf="email.touched && !email.valid">This is data is invalid.</p>    
+    <button type="submit" [disabled]="!temp2.valid">Submit</button>
+</form>
+<p><span>Touded: {{temp2.touched}}</span> | <span> Valid: {{temp2.valid}}</span></p>

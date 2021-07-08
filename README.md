@@ -268,6 +268,11 @@
 - Data flow - Asynchronous
 - Data modal - Unstructured and mutable
 - Form validation - Directives
+- FormModule, ngForm, ngSubmit, ngModel
+- way to handling valudations
+  1. Highligth the errors
+  2. Disable the submit button
+  3. Custom felid valudation -show/hide Error Message
 
 2. Reactive forms
 
