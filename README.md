@@ -254,7 +254,29 @@
 2. fillter
 3. subject - communcate croess component
 
-## 11. Http
+## 11. Form
+
+- Handling user input with forms
+- perform many other data-entry tasks.
+- two approch
+
+1. Template-driven forms
+
+- simple form
+- esay to use
+- don't scale as well as reactive forms
+- Data flow - Asynchronous
+- Data modal - Unstructured and mutable
+- Form validation - Directives
+
+2. Reactive forms
+
+- scalable, reusable, testable
+- Data model - Structured and immutable
+- Data flow - Synchronous
+- Form validation - Functions
+
+## 12. Http
 
 - HTTP is a protocol (protocol is systm rule that define how data is exchanged)
 - OSI modal Application layout
