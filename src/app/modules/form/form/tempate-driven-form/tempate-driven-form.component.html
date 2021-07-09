@@ -13,7 +13,11 @@
         <select name="country" ngModel>
             <option [value]="item?.name" *ngFor="let item of countryList"> {{item?.name}} </option>
         </select>    
-
+    <label for="">Addres</label>
+        <div ngModelGroup="address">
+            <input type="text" name="pinCode" ngModel>
+            <input type="text" name="places" ngModel>
+        </div>
     <button type="submit">Sumbit</button>
 </form>
 
@@ -25,14 +29,72 @@
 </p>
 
 
+
+
+
+<!-- form 2 -->
 <h4>Valudation and error handling ui</h4>
 
-<form #temp2="ngForm" (ngSubmit)="submited2(temp2)">
+<form #tempform2="ngForm" (ngSubmit)="submited2(tempform2)">
     <input type="text" name="second" ngModel>
     <input type="text" name="second" ngModel>
     <input type="text" name="frist" ngModel required >
     <input type="text" name="email" ngModel required #email="ngModel" >
         <p *ngIf="email.touched && !email.valid">This is data is invalid.</p>    
-    <button type="submit" [disabled]="!temp2.valid">Submit</button>
+    <button type="submit" [disabled]="!tempform2.valid">Submit</button>
 </form>
-<p><span>Touded: {{temp2.touched}}</span> | <span> Valid: {{temp2.valid}}</span></p>
+<p><span>Touded: {{tempform2.touched}}</span> | <span> Valid: {{tempform2.valid}}</span></p>
+
+
+
+
+<!-- form 3 -->
+<h4>Set value in template-driven forms </h4>
+<form #tempForm3="ngForm" (ngSubmit)="submit3(tempForm3)">
+    <p>
+        <label for="">name</label>
+        <input type="text" name="name" [(ngModel)]="preson.name">
+    </p>
+    <p>
+        <label for="">Gender</label>
+        <input type="radio" name="gender" id="male" value="male" [(ngModel)]="preson.gender">Male
+        <input type="radio" name="gender" id="female" value="female" [(ngModel)]="preson.gender">Female
+    </p>
+    <p ngModelGroup="address" >
+        <label for="">Address</label>
+        <input type="text" name="pincode"  [(ngModel)]="preson.address.pincode">
+        <input type="text" name="places"  [(ngModel)]="preson.address.places">
+    </p>
+    <p>
+        <button type="submit">Sumbit</button>
+        <button type="button" (click)="individually()">individually</button>
+        <button type="button" (click)="reset(tempForm3)">Reset form</button>
+    </p>
+</form>
+
+<!-- form 4 -->
+<h4>Use the template reference variable</h4>
+<form #tempForm4="ngForm" (ngSubmit)="submit4(tempForm4)">
+    <p>
+        <label for="">name</label>
+        <input type="text" name="name" [(ngModel)]="user.name">
+    </p>
+    <p>
+        <label for="">Gender</label>
+        <input type="radio" name="gender" id="male" value="male" [(ngModel)]="user.gender">Male
+        <input type="radio" name="gender" id="female" value="female" [(ngModel)]="user.gender">Female
+    </p>
+    <p ngModelGroup="address" >
+        <label for="">Address</label>
+        <input type="text" name="pincode"  [(ngModel)]="user.address.pincode">
+        <input type="text" name="places"  [(ngModel)]="user.address.places">
+    </p>
+    <p>
+        <button type="submit">Sumbit</button>
+        <button type="button" (click)="individuallyTempVar()" > individually</button>
+        <button type="button" (click)="patchValue()">patchValue</button>
+        <button type="button" (click)="patchValueFormGroup()">patchValue FormGroup </button>
+        <button type="button" (click)="resetTemp()">reset </button>
+        <button type="button" (click)="resetTempfrom()">resetForm </button>
+    </p>
+</form>

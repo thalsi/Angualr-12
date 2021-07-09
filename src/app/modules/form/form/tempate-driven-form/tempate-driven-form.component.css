@@ -56,3 +56,8 @@ span {
 input.ng-touched.ng-invalid {
   border: red 3px solid;
 }
+
+p {
+  margin: 0%;
+  padding: 0%;
+}

@@ -171,10 +171,9 @@
 ## 7. Element
 
 - Dom Element
-
-1. ng-container - hold directives without creating an HTML element.
-2. ng-content - project content inside a component template.
-3. ng-template - render the content manually.doesn't render anything by default.only stucteral directives for use
+  1. ng-container - hold directives without creating an HTML element.
+  2. ng-content - project content inside a component template.
+  3. ng-template - render the content manually.doesn't render anything by default.only stucteral directives for use
 
 ## 8. Lifecycle hooks
 
@@ -249,10 +248,9 @@
 - Promises execute once and then are done.Observable continue to be observed after the event occurs
 - Promises cannot be cancelled
 - RxJs provides a method called “pipe” to interact with streams
-
-1. map
-2. fillter
-3. subject - communcate croess component
+  1. map
+  2. fillter
+  3. subject - communcate croess component
 
 ## 11. Form
 
@@ -268,13 +266,26 @@
 - Data flow - Asynchronous
 - Data modal - Unstructured and mutable
 - Form validation - Directives
-- FormModule, ngForm, ngSubmit, ngModel
+- FormModule, ngForm, ngSubmit, ngModel, ngModelGroup
 - way to handling valudations
+
   1. Highligth the errors
   2. Disable the submit button
   3. Custom felid valudation -show/hide Error Message
 
-2. Reactive forms
+- Set value in template-driven forms
+  1. Two-way data binding
+  - Set value default
+  - Set value individually
+  - Reset form
+  2. Use the template reference variable
+  - Set value default
+  - Set value individually
+  - Set value of nested FormGroup
+  - patch value
+  - Reset values
+
+3.  Reactive forms
 
 - scalable, reusable, testable
 - Data model - Structured and immutable
@@ -289,9 +300,8 @@
 - communication between web clients and servers
 - CRUD operation
 - HTTP verbs
-
-1. POST
-2. GET
-3. PUT
-4. PATCH
-5. DELETE
+  1. POST
+  2. GET
+  3. PUT
+  4. PATCH
+  5. DELETE
