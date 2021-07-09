@@ -1,1 +1,45 @@
-<p>reactive-form works!</p>
+<h4>Form control </h4>
+<label for="">
+    name
+    <input type="text" [formControl]="name"> value : {{name.value}}
+    <button (click)="FormControlsetValue()">FormControl setValue</button>
+    <button (click)="FormControlreset()">FormControl reset</button>
+    <button (click)="FormControlChangeVaule()">FormControl ChangeVaule</button>
+</label>
+
+<h4>FormGroup and FormArray</h4>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <label for="">Name 
+        <input type="text" formControlName="name">
+    </label>
+    <label for="">Email 
+        <input type="text" formControlName="email">
+    </label>
+<div formArrayName="users" *ngFor="let item of user.controls; index as idx" >
+    <label for="">User 
+        <input type="text" [formControlName]="idx">
+        <button type="button" (click)="deleteFiled(idx)" >Delete</button>
+    </label>
+</div>
+
+    <button type="button" (click)="addUserFiled()">Add new Felid</button>
+    <button type="submit">Submit</button>
+</form>
+
+<h4>FormBuilder</h4>
+
+<form style="background-color: blueviolet;" [formGroup]="fbform" (ngSubmit)="fbformSumbit()">
+    <label for="">Name
+        <input type="text" formControlName="name">
+    </label>
+    <label for="">email
+        <input type="text" formControlName="email">
+    </label>
+    <div style="background-color: blanchedalmond;margin: 10px;" formGroupName="address">
+        formGroup
+        <input type="text" formControlName="phone">
+        <input type="text" formControlName="pincode">
+    </div>
+    <button type="submit">submit</button>
+</form>

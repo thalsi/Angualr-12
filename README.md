@@ -285,12 +285,39 @@
   - patch value
   - Reset values
 
-3.  Reactive forms
+3. Reactive forms
 
+- used to create Angular reactive form.
 - scalable, reusable, testable
 - Data model - Structured and immutable
 - Data flow - Synchronous
 - Form validation - Functions
+- three fundamental API
+
+  1. FormControl
+
+  - it is a class. get and set values and valudation.(input tag)
+
+  * FormControl Directive - FormControl instance to form a control element.
+  * FormControlName - FormGroup under FormControl control.
+
+  2. FormGroup
+
+  - track value and validity state of group of FormControl
+
+  3. FormArray
+
+  - tracks the value and validity state of array of FormControl, FormGroup or FormArray
+
+  4. FormBuilder
+
+  - The FormBuilder provides syntactic sugar that shortens creating instances of a FormControl, FormGroup, or FormArray
+
+- Grouping form controls
+  1. FormGroup with FormControl
+  2. FormGroup with FormControl, FormArray, Nexted FormGroup
+  3. FormBuilder with FormControl
+  4. FormBuilder with FormControl,FormArray, Nexted FormBuilder
 
 ## 12. Http
 

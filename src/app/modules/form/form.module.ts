@@ -5,7 +5,7 @@ import { FormRoutingModule } from './form-routing.module';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
 import { TempateDrivenFormComponent } from './form/tempate-driven-form/tempate-driven-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +17,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class FormModule { }
