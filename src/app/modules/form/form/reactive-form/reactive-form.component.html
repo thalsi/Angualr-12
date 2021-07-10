@@ -43,3 +43,32 @@
     </div>
     <button type="submit">submit</button>
 </form>
+
+
+<h4>Vaudations</h4>
+
+<form [formGroup]="valdationForm" (ngSubmit)="valudationtest()" >
+    <p for="">
+        name
+        <input type="text" formControlName="name" (input)="change()">
+        dirty: {{valdationForm.controls.name.dirty }} | invalid:  {{valdationForm.controls.name.invalid }}| touched: {{valdationForm.controls.name.touched }}
+    </p> 
+    <small *ngIf="valdationForm.controls.name.invalid && (valdationForm.controls.name.dirty || valdationForm.controls.name.touched)" >
+        <span *ngIf="valdationForm.controls.name.errors?.required">
+            Name is required.
+        </span>
+        <span *ngIf="valdationForm.controls.name.errors?.maxlength">
+            Name must be at least 4 characters long.
+        </span>
+    </small>
+    <p for="">
+        emai
+        <input type="text" formControlName="email">
+    </p>
+    <p for="">
+        city
+        <input type="text" formControlName="city">
+    </p>
+
+    <button type="submit" [disabled]="this.valdationForm.invalid">Submit</button>
+</form>

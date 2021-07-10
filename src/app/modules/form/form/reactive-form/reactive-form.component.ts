@@ -10,6 +10,8 @@ export class ReactiveFormComponent implements OnInit {
   name= new FormControl('');
   form:any;
   fbform:any;
+  valdationForm:any;
+
   constructor( private fb:FormBuilder) { }
 
   ngOnInit(): void {
@@ -32,6 +34,13 @@ export class ReactiveFormComponent implements OnInit {
         phone:[''],
         pincode:['']
       })
+    })
+
+
+    this.valdationForm=new FormGroup({
+      name: new FormControl('',[Validators.required,Validators.maxLength(3)]),
+      email: new FormControl(''),
+      city: new FormControl('')
     })
   }
 
@@ -69,9 +78,16 @@ export class ReactiveFormComponent implements OnInit {
 
 
   fbformSumbit(){
-    console.log('ll');
+    console.log( this.fbform.value);
+  }
+
+  valudationtest(){
+    console.log(this.valdationForm);
     
-   console.log( this.fbform.value);
-   
+  }
+
+  change(){
+    console.log(this.valdationForm.controls.name);
+    
   }
 }

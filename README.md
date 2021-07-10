@@ -314,10 +314,21 @@
   - The FormBuilder provides syntactic sugar that shortens creating instances of a FormControl, FormGroup, or FormArray
 
 - Grouping form controls
+
   1. FormGroup with FormControl
   2. FormGroup with FormControl, FormArray, Nexted FormGroup
   3. FormBuilder with FormControl
   4. FormBuilder with FormControl,FormArray, Nexted FormBuilder
+
+- Control status CSS classes
+  - .ng-valid
+  - .ng-invalid
+  - .ng-pending
+  - .ng-pristine
+  - .ng-dirty
+  - .ng-untouched
+  - .ng-touched
+  - .ng-submitted
 
 ## 12. Http
 
