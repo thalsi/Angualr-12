@@ -15,6 +15,7 @@ import { ServModule } from './modules/services/serv.module';
 import { ObservablesModule } from './modules/observables/observables.module';
 import { HttpTryModules } from './modules/http/http-try.module';
 import { FormModule } from './modules/form/form.module';
+import { RoutingModule } from './modules/routing/routing.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FormModule } from './modules/form/form.module';
     ObservablesModule,
     HttpTryModules,
     FormModule,
+    RoutingModule,
     
     NgSelectModule,
     FormsModule

@@ -330,7 +330,23 @@
   - .ng-touched
   - .ng-submitted
 
-## 12. Http
+## 12. Routing
+
+- navigate from one view to another view
+
+1. RouterModule
+2. Configaring Routes
+3. RouterOutlet
+4. Routerlink
+5. Wildcard router
+6. Redirecting router
+7. router parameter
+8. Child Routes / Nested Routes
+9. Relative router (:id)
+10. Lazyloading
+11. Router guads
+
+## 13. Http
 
 - HTTP is a protocol (protocol is systm rule that define how data is exchanged)
 - OSI modal Application layout
@@ -341,5 +357,4 @@
   1. POST
   2. GET
   3. PUT
-  4. PATCH
-  5. DELETE
+  4. DELETE

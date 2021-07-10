@@ -1,0 +1,8 @@
+<h2>Routes</h2>
+<div style="text-align: center;margin-bottom: 10px;">
+    <button><a [routerLink]="['/user/home']" routerLinkActive="active">home</a></button>
+    <button><a [routerLink]="['/user/list']" routerLinkActive="active">list</a></button>
+</div>
+<div style="background-color: rgb(178, 241, 238); border: gold 3px solid; width: 100%; height: 500px;">
+    <router-outlet></router-outlet>
+</div>

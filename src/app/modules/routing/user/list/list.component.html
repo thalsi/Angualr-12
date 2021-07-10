@@ -1,0 +1,6 @@
+<p>list works!</p>
+<div>
+    <ul *ngFor="let item of userList">
+        <li [routerLink]="[item.id]" routerLinkActive="router-link-active" >{{item.name}}</li>
+    </ul>
+</div>
