@@ -1,2 +1,29 @@
-<h3>http</h3>
-<button (click)="postMethord()">Post</button>
+<h2>http Methord</h2>
+
+<div style="margin: 30px; background-color: darkorchid;">
+    <form [formGroup]="form">
+        <label for="">Fast Name</label>
+        <input type="text" formControlName="first_name">
+        <label for="">Last Name</label>
+        <input type="text" formControlName="last_name">
+        <label for="">Email</label>
+        <input type="text" formControlName="email">
+        <label for="">gender</label>
+        <div>
+            <input type="radio" formControlName="gender" value="male">Male
+            <input type="radio" formControlName="gender" value="female">Female
+        </div>
+        <button type="button" (click)="postrequst()">Post</button>
+        <button type="button" (click)="putRequest(2)">Put</button>
+        <button type="button" (click)="deleteRequst(5)">Delete</button>
+    </form>
+</div>
+
+<button (click)="getRequest()">GET</button>
+<div *ngFor="let item of user">
+   <div style="background-color: rgb(221, 255, 255);">
+    <p>Id :{{item.id}} | Gender: {{item.gender}} </p>
+    <p>Name: {{item.first_name}} {{item.last_name}}</p>
+    <p>Email: {{item.email}}</p>
+   </div>
+</div>

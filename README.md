@@ -346,15 +346,54 @@
 10. Lazyloading
 11. Router guads
 
-## 13. Http
+## 13. Http module
 
 - HTTP is a protocol (protocol is systm rule that define how data is exchanged)
 - OSI modal Application layout
 - http -Hyper Text Transfer Protocol
 - communication between web clients and servers
-- CRUD operation
-- HTTP verbs
-  1. POST
-  2. GET
-  3. PUT
-  4. DELETE
+- Table Of Contents
+
+1. HTTP Client module
+2. HTTP GET, POST, PUT, DELETE
+3. Type Safety
+4. Request Parameters
+5. HTTP Headers
+6. RxJs operator
+
+- map, filter
+
+7. HTTP Error Handling
+
+- Catching Errors in HTTP Request
+
+1. Component
+
+-
+
+2. Service
+
+- catchError Retrun throw it back to component
+
+3. Globally
+
+   - You are unauthorized to access the API Service,
+   - You are authorized, but forbidden to access a particular resource
+   - The API End Point is invalid or does not exist
+   - Network error
+   - Server down
+
+4. HTTP Interceptors
+
+- The Global HTTP error handling use
+
+9. Progress HTTP Events
+
+10. HTTP Status Codes
+
+- return the error response
+
+1.  401 - Unauthorized
+2.  403 - Forbidden
+3.  404 - Not found
+4.  500 - internal Server Error
