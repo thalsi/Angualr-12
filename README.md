@@ -251,6 +251,7 @@
   1. map
   2. fillter
   3. subject - communcate croess component
+  4. catchError
 
 ## 11. Form
 
@@ -361,15 +362,17 @@
 5. HTTP Headers
 6. RxJs operator
 
-- map, filter
+- map - map to transform a collection of items into a collection of different items.
+- filter - fitering data
 
 7. HTTP Error Handling
 
 - Catching Errors in HTTP Request
+- track your errors to improve UX
 
 1. Component
 
--
+- observable The second callback error
 
 2. Service
 

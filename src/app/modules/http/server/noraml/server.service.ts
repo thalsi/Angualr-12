@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { User } from '../../model/User';
 
 @Injectable({
@@ -26,7 +26,7 @@ export class ServerService {
     return this._http
       .get<User[]>('http://localhost:3000/get',{ params: this.params , headers: this.headers })
       .pipe(
-          map((res)=>{
+          map((res:User[])=>{
           return res;
         })
       );
@@ -34,6 +34,12 @@ export class ServerService {
 
   postApi(data:User){
     return this._http.post('http://localhost:3000/post',data)
+    .pipe(
+      map((res)=> {return res}),
+      catchError(err=>{
+        throw 'server side get error'
+      })
+    )
   }
 
   putApi(data:User,id:number){

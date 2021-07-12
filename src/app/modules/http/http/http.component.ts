@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { User } from '../model/User';
@@ -12,6 +13,7 @@ export class HttpComponent implements OnInit {
 
   form:any;
   user:User[]=[];
+  eorr:any;
   // user:any;
   constructor(private _server:ServerService) { }
 
@@ -36,7 +38,17 @@ export class HttpComponent implements OnInit {
   postrequst(){
     this._server.postApi(this.form.value).subscribe(res=>{
       console.log(res);
-    },(error)=>{
+    },(error:HttpErrorResponse)=>{
+
+      if(error.status==422){
+        this.eorr=error;
+        console.log('----');
+        console.log(error);
+        
+      }
+ 
+      console.log('error chatch in commopnt');
+      
       console.log(error);
     })
   }
