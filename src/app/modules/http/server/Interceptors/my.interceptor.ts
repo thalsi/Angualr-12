@@ -21,7 +21,7 @@ export class MyInterceptor implements HttpInterceptor {
     console.log(request);
 
     const req=request.clone({
-      url: environment.apiBasePath+request.url
+      // url: environment.apiBasePath+request.url
     });
     return next.handle(req).pipe(
       catchError((error:HttpErrorResponse) =>{

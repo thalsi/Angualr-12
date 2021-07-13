@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
@@ -48,5 +48,14 @@ export class ServerService {
 
   deleteApi(id:number){
     return this._http.delete(`delete/${id}`)
+  }
+
+  getEevent(){
+    const req= new HttpRequest('GET',"https://jsonplaceholder.typicode.com/photos",{ reportProgress: true})
+    return this._http.request(req).pipe(
+      map((res:any)=>{
+        return res;
+      })
+    )
   }
 }

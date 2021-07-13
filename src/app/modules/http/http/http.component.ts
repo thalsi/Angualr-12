@@ -1,4 +1,4 @@
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpErrorResponse, HttpEvent } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { User } from '../model/User';
@@ -94,6 +94,14 @@ export class HttpComponent implements OnInit {
       console.log(res);
     },(err)=>{
       console.log(err);
+    })
+  }
+
+
+  eventButtion(){
+    this._server.getEevent().subscribe((res:HttpEvent<any>)=>{
+        console.log(res);
+        
     })
   }
 }
