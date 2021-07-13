@@ -1,5 +1,6 @@
 <h2>http Methord</h2>
 
+<h3>HTTP -GET ,POST ,PUT ,DELELE</h3>
 <div style="margin: 30px; background-color: darkorchid;">
     <form [formGroup]="form">
         <label for="">Fast Name</label>
@@ -27,4 +28,22 @@
     <p>Name: {{item.first_name}} {{item.last_name}}</p>
     <p>Email: {{item.email}}</p>
    </div>
+</div>
+
+
+<h3>JWT-Token</h3>
+
+<div style="background-color: rgb(208, 255, 161); border: black solid 5px; text-align: center;">
+    <p>Token</p>
+    <form [formGroup]="loginForm">
+        <label for="">UserName</label>
+        <input type="text" formControlName="username">
+        <label for="">Password</label>
+        <input type="text" formControlName="password">
+        <button (click)="login()">Login</button>
+    </form>
+</div>
+<div style="background-color: rgb(255, 161, 161); border: black solid 5px; text-align: center;">
+    <p>Token Pass Hadeer Api</p>
+    <button (click)="tokenValidation()">Tokan backEnd Validation</button>
 </div>

@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { User } from '../model/User';
+import { JwtTokenService } from '../server/jwt-token/jwt-token.service';
 import { ServerService } from '../server/noraml/server.service';
 
 @Component({
@@ -14,8 +15,13 @@ export class HttpComponent implements OnInit {
   form:any;
   user:User[]=[];
   eorr:any;
-  // user:any;
-  constructor(private _server:ServerService) { }
+
+  loginForm:any;
+
+  constructor(
+    private _server:ServerService,
+    private _jwt:JwtTokenService
+    ) { }
 
   ngOnInit(): void {
 
@@ -24,6 +30,11 @@ export class HttpComponent implements OnInit {
       first_name:new FormControl(''),
       last_name:new FormControl(''),
       gender:new FormControl(''),
+    })
+
+    this.loginForm= new FormGroup({
+      username:new FormControl(''),
+      password:new FormControl('')
     })
 
   }
@@ -69,5 +80,21 @@ export class HttpComponent implements OnInit {
     })
   }
 
+  login(){
+    this._jwt.login(this.loginForm.value).subscribe((res:any)=>{
+      console.log(res);
+      this._jwt.token=res.tokan;
+    },(err)=>{
+      console.log(err);
+    })
+  }
+
+  tokenValidation(){
+    this._jwt.tokenValidationApi().subscribe((res:any)=>{
+      console.log(res);
+    },(err)=>{
+      console.log(err);
+    })
+  }
 }
 
