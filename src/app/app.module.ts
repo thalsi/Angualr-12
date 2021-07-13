@@ -16,6 +16,8 @@ import { ObservablesModule } from './modules/observables/observables.module';
 import { HttpTryModules } from './modules/http/http-try.module';
 import { FormModule } from './modules/form/form.module';
 import { RoutingModule } from './modules/routing/routing.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MyInterceptor } from './modules/http/server/Interceptors/my.interceptor';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,7 @@ import { RoutingModule } from './modules/routing/routing.module';
     NgSelectModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
