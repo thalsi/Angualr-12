@@ -400,3 +400,24 @@
 2.  403 - Forbidden
 3.  404 - Not found
 4.  500 - internal Server Error
+
+## 14. Change Detection
+
+- Change Detection means updating the view (DOM) when the data has changed.
+- two Change Detection Strategies
+  1. default
+  - Change Detection checks for all components from top to bottom if a template value has changed.
+  2. onPush
+  -
+- that cause change detection trigger ?
+  - any browser event (click, keyup, etc.)
+  - setInterval() and setTimeout()
+  - HTTP requests via XMLHttpRequest
+
+---
+
+3.changeDetection
+1.LoggedInGuard (canActivate,canActivateChild)
+2.LoggedOutGuard
+4.autologin
+5.autologout

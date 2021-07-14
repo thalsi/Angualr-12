@@ -8,6 +8,8 @@ import { LifeCycleHooksModule } from './modules/life-cycle-hooks/life-cycle-hook
 import { ServModule } from './modules/services/serv.module';
 import { HttpTryModules } from './modules/http/http-try.module';
 import { FormModule } from './modules/form/form.module';
+import { ChangeDetectionModule } from './modules/changeDetection/changeDetection.module';
+
 
 const routes: Routes = [
   {
@@ -49,6 +51,10 @@ const routes: Routes = [
   {
     path:'router',
     loadChildren:()=> import('./modules/routing/routing.module').then(m => m.RoutingModule)
+  },
+  {
+    path:'change-detection',
+    loadChildren:()=> import('./modules/changeDetection/changeDetection.module').then(m => m.ChangeDetectionModule)
   }
 ];
 

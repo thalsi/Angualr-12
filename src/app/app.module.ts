@@ -16,6 +16,7 @@ import { ObservablesModule } from './modules/observables/observables.module';
 import { HttpTryModules } from './modules/http/http-try.module';
 import { FormModule } from './modules/form/form.module';
 import { RoutingModule } from './modules/routing/routing.module';
+import { ChangeDetectionModule } from './modules/changeDetection/changeDetection.module';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { RoutingModule } from './modules/routing/routing.module';
     HttpTryModules,
     FormModule,
     RoutingModule,
+    ChangeDetectionModule,
     
     NgSelectModule,
     FormsModule

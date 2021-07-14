@@ -1,0 +1,11 @@
+<h2>change-detection </h2>
+{{calling()}}
+
+<div style="background-color: chocolate;">
+    <label for="">Name</label>
+    <input type="text" [(ngModel)]="data">
+    <p>{{data}}</p>
+</div>
+<button (click)="clickme()">Click</button>
+<app-default [data]="data"></app-default>
+<app-onpush [data]="data"></app-onpush>
