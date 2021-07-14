@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
@@ -24,7 +24,7 @@ export class ServerService {
 
   getApi():Observable<User[]>{
     return this._http
-      .get<User[]>('http://localhost:3000/get',{ params: this.params , headers: this.headers })
+      .get<User[]>('get',{ params: this.params , headers: this.headers })
       .pipe(
           map((res:User[])=>{
           return res;
@@ -33,7 +33,7 @@ export class ServerService {
   }
 
   postApi(data:User){
-    return this._http.post('http://localhost:3000/post',data)
+    return this._http.post('post',data)
     .pipe(
       map((res)=> {return res}),
       catchError(err=>{
@@ -43,10 +43,19 @@ export class ServerService {
   }
 
   putApi(data:User,id:number){
-    return this._http.put(`http://localhost:3000/put/${id}`,data)
+    return this._http.put(`put/${id}`,data)
   }
 
   deleteApi(id:number){
-    return this._http.delete(`http://localhost:3000/delete/${id}`)
+    return this._http.delete(`delete/${id}`)
+  }
+
+  getEevent(){
+    const req= new HttpRequest('GET',"https://jsonplaceholder.typicode.com/photos",{ reportProgress: true})
+    return this._http.request(req).pipe(
+      map((res:any)=>{
+        return res;
+      })
+    )
   }
 }

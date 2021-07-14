@@ -17,6 +17,8 @@ import { HttpTryModules } from './modules/http/http-try.module';
 import { FormModule } from './modules/form/form.module';
 import { RoutingModule } from './modules/routing/routing.module';
 import { ChangeDetectionModule } from './modules/changeDetection/changeDetection.module';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MyInterceptor } from './modules/http/server/Interceptors/my.interceptor';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,7 @@ import { ChangeDetectionModule } from './modules/changeDetection/changeDetection
     NgSelectModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -351,7 +351,7 @@
 
 - HTTP is a protocol (protocol is systm rule that define how data is exchanged)
 - OSI modal Application layout
-- http -Hyper Text Transfer Protocol
+- http - Hyper Text Transfer Protocol
 - communication between web clients and servers
 - Table Of Contents
 
@@ -362,44 +362,52 @@
 5. HTTP Headers
 6. RxJs operator
 
-- map - map to transform a collection of items into a collection of different items.
-- filter - fitering data
+   - map - map to transform a collection of items into a collection of different items.
+   - filter - fitering data
 
 7. HTTP Error Handling
 
-- Catching Errors in HTTP Request
-- track your errors to improve UX
+   - Catching Errors in HTTP Request
+   - track your errors to improve UX
 
-1. Component
+8. Component
 
-- observable The second callback error
+   - observable The second callback error
 
-2. Service
+9. Service
 
-- catchError Retrun throw it back to component
+   - catchError Retrun throw it back to component
 
-3. Globally
+10. Globally
 
-   - You are unauthorized to access the API Service,
-   - You are authorized, but forbidden to access a particular resource
-   - The API End Point is invalid or does not exist
-   - Network error
-   - Server down
+    - You are unauthorized to access the API Service,
+    - You are authorized, but forbidden to access a particular resource
+    - The API End Point is invalid or does not exist
+    - Network error
+    - Server down
 
-4. HTTP Interceptors
+11. HTTP Interceptors
 
-- The Global HTTP error handling use
+    - Interceptors are a unique type of Angular Service
+    - intercept incoming or outgoing HTTP requests using the HttpClient modify
+    - similar to the concept of middle-ware with a framework like Express
+    - chain Interceptors
+    - Interceptors Applications
 
-9. Progress HTTP Events
+    * Handling HTTP Headers (Auth)
+    * The Global HTTP error handling(404,500,401)
+    * BasePath set
+    * Request respone time calculate
+    * Loading spnner using
 
-10. HTTP Status Codes
+12. Progress HTTP Events
 
-- return the error response
+13. HTTP Status Codes
 
-1.  401 - Unauthorized
-2.  403 - Forbidden
-3.  404 - Not found
-4.  500 - internal Server Error
+14. 401 - Unauthorized
+15. 403 - Forbidden
+16. 404 - Not found
+17. 500 - internal Server Error
 
 ## 14. Change Detection
 
