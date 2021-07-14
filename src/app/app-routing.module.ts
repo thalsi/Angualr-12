@@ -9,12 +9,16 @@ import { ServModule } from './modules/services/serv.module';
 import { HttpTryModules } from './modules/http/http-try.module';
 import { FormModule } from './modules/form/form.module';
 import { ChangeDetectionModule } from './modules/changeDetection/changeDetection.module';
-
+import { ProjectModule } from './Project/project.module';
 
 const routes: Routes = [
   {
     path:'',
     component:ListComponent
+  },
+  {
+    path:'poject',
+    loadChildren: () => import('./Project/project.module').then(m => m.ProjectModule)
   },
   {
     path:'template',

@@ -346,6 +346,7 @@
 9. Relative router (:id)
 10. Lazyloading
 11. Router guads
+    - canActivate( LoginGuard, LoginOutGuard )
 
 ## 13. Http module
 
@@ -404,10 +405,10 @@
 
 13. HTTP Status Codes
 
-14. 401 - Unauthorized
-15. 403 - Forbidden
-16. 404 - Not found
-17. 500 - internal Server Error
+- 401 - Unauthorized
+- 403 - Forbidden
+- 404 - Not found
+- 500 - internal Server Error
 
 ## 14. Change Detection
 
@@ -444,8 +445,6 @@
 
 ---
 
-1.LoggedInGuard (canActivate,canActivateChild)
-2.LoggedOutGuard
 4.autologin
 5.autologout
 6.pipe

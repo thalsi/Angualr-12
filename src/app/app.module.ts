@@ -19,6 +19,7 @@ import { RoutingModule } from './modules/routing/routing.module';
 import { ChangeDetectionModule } from './modules/changeDetection/changeDetection.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MyInterceptor } from './modules/http/server/Interceptors/my.interceptor';
+import { ProjectModule } from './Project/project.module';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { MyInterceptor } from './modules/http/server/Interceptors/my.interceptor
     FormModule,
     RoutingModule,
     ChangeDetectionModule,
+    ProjectModule,
     
     NgSelectModule,
     FormsModule
