@@ -416,16 +416,36 @@
   1. default
   - Change Detection checks for all components from top to bottom if a template value has changed.
   2. onPush
-  -
+  - This change detection strategy provides the possibility to skip unnecessary checks for this component and all it’s child components.
+  - the change detector is only triggered if a new reference is passed as @Input() value.
+  - Be careful - not do not trigger change detection(setTimeout,setInterval, any RxJS observable subscription(http))
 - that cause change detection trigger ?
+
   - any browser event (click, keyup, etc.)
   - setInterval() and setTimeout()
   - HTTP requests via XMLHttpRequest
 
+- value types
+
+  1. data types (number,string,boolean,etc..)
+  2. data structures (array,object,etc..)
+
+- Memory Type
+
+1. stack memory
+   - store their value on the stack memory(data types) technically not true
+2. heap memory
+   - store a reference on the stack memory.which points to their actual value on the heap memory.(data structures)
+
+- Understanding ChangeDetectorRef
+  - detectChanges
+  - markForCheck
+  - detach
+
 ---
 
-3.changeDetection
 1.LoggedInGuard (canActivate,canActivateChild)
 2.LoggedOutGuard
 4.autologin
 5.autologout
+6.pipe

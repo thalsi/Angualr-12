@@ -1,11 +1,25 @@
-<h2>change-detection </h2>
-{{calling()}}
+<h2>Change Detection</h2>
+{{Granpa()}}
+<div class="flex-container">
+    <div>
+        <p>Value type</p>
+        <input #values type="text" placeholder="Enter a new valueType">
+        <button (click)="valueType(values.value)">valueType</button>
 
-<div style="background-color: chocolate;">
-    <label for="">Name</label>
-    <input type="text" [(ngModel)]="data">
-    <p>{{data}}</p>
+        <p>Refrencs type</p>
+        <input #newFruit type="text" placeholder="Enter a new fruit">
+        <button (click)="addFruit(newFruit.value)">Add Fruit</button>
+    </div>
 </div>
-<button (click)="clickme()">Click</button>
-<app-default [data]="data"></app-default>
-<app-onpush [data]="data"></app-onpush>
+
+<div class="flex-container">
+    <div >
+        <h3>ChangeDetectionStrategy.Defult</h3>
+        <app-default [data]="fruits" [value]="value"></app-default>
+    </div>
+    
+    <div >
+        <h3>ChangeDetectionStrategy.onPush</h3>
+        <app-onpush [data]="fruits" [value]="value"></app-onpush>
+    </div>
+</div>

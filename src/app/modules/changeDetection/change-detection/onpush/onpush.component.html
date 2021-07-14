@@ -1,3 +1,13 @@
 <p>onpush works!</p>
-<p>{{data}}</p>
+<div style="background-color: rgb(255, 148, 148);">
+    <p>Value type </p>
+    <p>value:{{value}}</p>
+</div>
+
+<div style="background-color: rgb(204, 253, 154);">
+    <p>Refrecnces type</p>
+    <ul>
+        <li *ngFor="let item of data">{{item}}</li>
+    </ul>
+</div>
 {{onpush()}}
