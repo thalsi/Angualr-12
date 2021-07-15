@@ -108,6 +108,9 @@
 10. Template expression operators.
 
 - pipe (|)
+  - transform data
+  - Pipes are simple functions you can use in template expressions to accept an input value and return a transformed value.
+  - bulit in pipe and Custom pipe
 - safe navigation operator ( ?. )
 
 11. Binding syntax.
@@ -447,4 +450,5 @@
 
 4.autologin
 5.autologout
-6.pipe
+1.matrials
+2,animation
