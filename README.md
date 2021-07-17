@@ -347,7 +347,19 @@
 7. router parameter
 8. Child Routes / Nested Routes
 9. Relative router (:id)
-10. Lazyloading
+10. Types of module loading
+    1. Eager loading
+    - by defult loading
+    - root module is always eager loading
+    - All module are downloaded after application strat
+    - working fine small apllication
+    2. Lazy loading
+    - Lazy loading helps you render an application faster
+    - Feature modules under Lazy Loading would be loaded on demand after the application starts
+    3. Preloading
+    - enable preloading of all lazy loaded modules
+    - Lazy loaded Modules in the background asynchronously
+    - two type bulit-in and Custom-type
 11. Router guads
     - canActivate( LoginGuard, LoginOutGuard )
 
