@@ -117,7 +117,7 @@ export class ReactiveFormComponent implements OnInit {
   {
     let arry=this.formArrayInsideGroup.get('persons');
     console.log(arry);
-    
+   
     return arry as FormArray;
   }
 }

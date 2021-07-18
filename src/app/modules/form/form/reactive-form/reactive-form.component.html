@@ -80,7 +80,7 @@
 <button (click)="addGroup(fast.value,last.value)">FormGuroup Add in FormArray</button>
 
 <form [formGroup]="formArrayInsideGroup" >
-    <div  formArrayName="persons" *ngFor="let item of getPersonsArray.controls;let i=index">
+    <div  formArrayName="persons" *ngFor="let item of getPersonsArray;let i=index">
         <ng-container [formGroupName]="i">
             <label for="">Fast Name
                 <input type="text" formControlName="fast_name">
