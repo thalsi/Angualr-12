@@ -72,3 +72,23 @@
 
     <button type="submit" [disabled]="this.valdationForm.invalid">Submit</button>
 </form>
+
+<h4>FormGroup inside FormArray inside control or FromGroup(Dinmic)</h4>
+
+<label for="">Fast<input type="text" name="Fast" #fast></label>
+<label for="">Fast<input type="text" name="last" #last></label>
+<button (click)="addGroup(fast.value,last.value)">FormGuroup Add in FormArray</button>
+
+<form [formGroup]="formArrayInsideGroup" >
+    <div  formArrayName="persons" *ngFor="let item of getPersonsArray.controls;let i=index">
+        <ng-container [formGroupName]="i">
+            <label for="">Fast Name
+                <input type="text" formControlName="fast_name">
+            </label>
+            <label for="">Second Name
+                <input type="text" formControlName="last_name">
+            </label>
+        </ng-container>
+    </div>
+    <button [disabled]="formArrayInsideGroup.invalid">Sumbit</button>
+</form>

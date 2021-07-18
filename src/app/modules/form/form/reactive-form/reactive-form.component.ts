@@ -11,6 +11,7 @@ export class ReactiveFormComponent implements OnInit {
   form:any;
   fbform:any;
   valdationForm:any;
+  formArrayInsideGroup:any;
 
   constructor( private fb:FormBuilder) { }
 
@@ -26,7 +27,6 @@ export class ReactiveFormComponent implements OnInit {
       ])
     })
 
-
     this.fbform= this.fb.group({
       name:[''],
       email:[''],
@@ -36,12 +36,18 @@ export class ReactiveFormComponent implements OnInit {
       })
     })
 
-
     this.valdationForm=new FormGroup({
       name: new FormControl('',[Validators.required,Validators.maxLength(3)]),
       email: new FormControl(''),
       city: new FormControl('')
     })
+
+    this.formArrayInsideGroup= this.fb.group({
+      control:[''],
+      persons:this.fb.array([
+
+      ])
+    });
   }
 
   FormControlsetValue(){
@@ -88,6 +94,30 @@ export class ReactiveFormComponent implements OnInit {
 
   change(){
     console.log(this.valdationForm.controls.name);
+  }
+
+  addGroup(fast:any,last:any){
+    console.log(fast);
     
+    // let fast="ali mone";
+    // let last="K t";
+
+    let fb_array=this.formArrayInsideGroup.get('persons');
+    fb_array.push(this.fb.group({
+      fast_name:[fast,Validators.required],
+      last_name:[last,Validators.required]
+    }))
+
+   let a= this.getPersonsArray.controls
+   console.log(a);
+   
+  }
+
+  get getPersonsArray():FormArray
+  {
+    let arry=this.formArrayInsideGroup.get('persons');
+    console.log(arry);
+    
+    return arry as FormArray;
   }
 }
