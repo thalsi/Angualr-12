@@ -20,6 +20,7 @@ import { ChangeDetectionModule } from './modules/changeDetection/changeDetection
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MyInterceptor } from './modules/http/server/Interceptors/my.interceptor';
 import { ProjectModule } from './Project/project.module';
+import { AnimationModule } from './modules/animation/animation.module';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ProjectModule } from './Project/project.module';
     RoutingModule,
     ChangeDetectionModule,
     ProjectModule,
-    
+    AnimationModule,
+
     NgSelectModule,
     FormsModule
   ],

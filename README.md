@@ -458,9 +458,11 @@
   - markForCheck
   - detach
 
+## 15. Animation
+
+- Animation provides the illusion of motion: HTML elements change styling over time.
+
 ---
 
-4.autologin
-5.autologout
 1.matrials
 2,animation
