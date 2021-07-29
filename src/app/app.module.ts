@@ -21,6 +21,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MyInterceptor } from './modules/http/server/Interceptors/my.interceptor';
 import { ProjectModule } from './Project/project.module';
 import { AnimationModule } from './modules/animation/animation.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { AnimationModule } from './modules/animation/animation.module';
     AnimationModule,
 
     NgSelectModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true },],
   bootstrap: [AppComponent]

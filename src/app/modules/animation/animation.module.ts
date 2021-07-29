@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { AnimationRoutingModule } from './animation-routing.module';
 import { AnimationsComponent } from './animations/animations.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -12,7 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     CommonModule,
     AnimationRoutingModule,
-    BrowserAnimationsModule
   ]
 })
 export class AnimationModule { }

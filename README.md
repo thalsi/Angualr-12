@@ -461,8 +461,9 @@
 ## 15. Animation
 
 - Animation provides the illusion of motion: HTML elements change styling over time.
+- npm install @angular/animations@latest --save
+- import BrowserAnimationsModule preferably in your root module.
 
 ---
 
 1.matrials
-2,animation

@@ -1,6 +1,4 @@
 <p>animations works!</p>
-<h3>Change the div size</h3>
-<button (click)="changeState()">Change Size</button>
-<br />
-<div [@changeDivSize]="currentState"></div>
-<br />
+<div [@openClose]="isOpen ? 'open' : 'closed'">
+  <p>hello</p>
+</div>
