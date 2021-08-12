@@ -22,6 +22,7 @@ import { MyInterceptor } from './modules/http/server/Interceptors/my.interceptor
 import { ProjectModule } from './Project/project.module';
 import { AnimationModule } from './modules/animation/animation.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CrudModule } from './crud/crud.module';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ChangeDetectionModule,
     ProjectModule,
     AnimationModule,
+    CrudModule,
 
     NgSelectModule,
     FormsModule,

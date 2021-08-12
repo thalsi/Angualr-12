@@ -18,6 +18,10 @@ const routes: Routes = [
     component: ListComponent
   },
   {
+    path: 'crud',
+    loadChildren: () => import('./crud/crud.module').then(m => m.CrudModule)
+  },
+  {
     path: 'poject',
     loadChildren: () => import('./Project/project.module').then(m => m.ProjectModule)
   },

@@ -296,6 +296,10 @@
 - Data model - Structured and immutable
 - Data flow - Synchronous
 - Form validation - Functions
+- setValue and patchValue
+    * both set the value of a control in a FormGroup.
+    * setValue - we have to set the value of All controls
+    * patchValue - we have to set the value of sapific controls
 - three fundamental API
 
   1. FormControl
