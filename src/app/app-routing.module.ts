@@ -68,6 +68,10 @@ const routes: Routes = [
   {
     path: 'animation',
     loadChildren: () => import('./modules/animation/animation.module').then(m => m.AnimationModule)
+  },
+  {
+    path: 'materials',
+    loadChildren: () => import('./modules/materials/materials.module').then(m => m.MaterialsModule)
   }
 ];
 

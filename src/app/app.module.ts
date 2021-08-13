@@ -23,6 +23,7 @@ import { ProjectModule } from './Project/project.module';
 import { AnimationModule } from './modules/animation/animation.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CrudModule } from './crud/crud.module';
+import { MaterialsModule } from './modules/materials/materials.module';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { CrudModule } from './crud/crud.module';
     ProjectModule,
     AnimationModule,
     CrudModule,
+    MaterialsModule,
 
     NgSelectModule,
     FormsModule,
