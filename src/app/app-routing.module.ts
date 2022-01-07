@@ -72,6 +72,10 @@ const routes: Routes = [
   {
     path: 'materials',
     loadChildren: () => import('./modules/materials/materials.module').then(m => m.MaterialsModule)
+  },
+  {
+    path:'school',
+    loadChildren: () => import('./practices/1-ngModule/5-ngModule/school.module').then(m=> m.SchoolModule)
   }
 ];
 

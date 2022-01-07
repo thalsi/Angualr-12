@@ -24,6 +24,7 @@ import { AnimationModule } from './modules/animation/animation.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CrudModule } from './crud/crud.module';
 import { MaterialsModule } from './modules/materials/materials.module';
+import { SchoolModule } from './practices/1-ngModule/5-ngModule/school.module';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { MaterialsModule } from './modules/materials/materials.module';
     AnimationModule,
     CrudModule,
     MaterialsModule,
+    SchoolModule,
 
     NgSelectModule,
     FormsModule,
