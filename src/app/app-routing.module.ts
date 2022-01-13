@@ -74,8 +74,8 @@ const routes: Routes = [
     loadChildren: () => import('./modules/materials/materials.module').then(m => m.MaterialsModule)
   },
   {
-    path:'school',
-    loadChildren: () => import('./practices/1-ngModule/5-ngModule/school.module').then(m=> m.SchoolModule)
+    path:'collage',
+    loadChildren:() =>import('./practices/6-ngModule/collage.module').then(m=>m.CollageModule)
   }
 ];
 
