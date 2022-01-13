@@ -1,16 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { ListComponent } from './list/list.component';
-import { TemplateSyntaxModule } from './modules/Template-syntax/template-syntax.module';
-import { DirectivesModule } from './modules/directives/directives.module';
-import { DecoratorModule } from './modules/decorator/decorator.module';
-import { LifeCycleHooksModule } from './modules/life-cycle-hooks/life-cycle-hooks.module';
-import { ServModule } from './modules/services/serv.module';
-import { HttpTryModules } from './modules/http/http-try.module';
-import { FormModule } from './modules/form/form.module';
-import { ChangeDetectionModule } from './modules/changeDetection/changeDetection.module';
-import { ProjectModule } from './Project/project.module';
-import { AnimationModule } from './modules/animation/animation.module';
+
 
 const routes: Routes = [
   {
@@ -74,8 +65,8 @@ const routes: Routes = [
     loadChildren: () => import('./modules/materials/materials.module').then(m => m.MaterialsModule)
   },
   {
-    path:'collage',
-    loadChildren:() =>import('./practices/6-ngModule/collage.module').then(m=>m.CollageModule)
+    path:'ammu',
+    loadChildren:()=> import('./practices/1-ngModule/7-ngModule/ammu.module').then(m => m.AmmuModule)
   }
 ];
 
