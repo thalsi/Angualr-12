@@ -65,8 +65,8 @@ const routes: Routes = [
     loadChildren: () => import('./modules/materials/materials.module').then(m => m.MaterialsModule)
   },
   {
-    path:'ammu',
-    loadChildren:()=> import('./practices/1-ngModule/7-ngModule/ammu.module').then(m => m.AmmuModule)
+    path:'joke',
+    loadChildren: () => import('./practices/1-ngModule/8-ngModule/joke.module').then(m => m.JokeModule)
   }
 ];
 
