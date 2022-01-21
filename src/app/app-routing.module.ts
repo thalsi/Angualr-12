@@ -71,6 +71,10 @@ const routes: Routes = [
   {
     path:'jio',
     loadChildren:() => import('./practices/1-ngModule/9-ngModule/gio.module').then(m =>m.GioModule)
+  },
+  {
+    path:'food',
+    loadChildren:() => import('./practices/1-ngModule/10-ngModule/food.module').then(m=> m.FoodModule)
   }
 ];
 
