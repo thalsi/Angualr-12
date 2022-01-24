@@ -75,6 +75,10 @@ const routes: Routes = [
   {
     path:'food',
     loadChildren:() => import('./practices/1-ngModule/10-ngModule/food.module').then(m=> m.FoodModule)
+  },
+  {
+    path:'tempate-syntax',
+    loadChildren:() => import('./practices/2-template-syntax/1-tempate-syntax/tempate-syntax-1.module').then(m=>m.TempateSyntax1Module)
   }
 ];
 

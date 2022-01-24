@@ -26,6 +26,7 @@ import { CrudModule } from './crud/crud.module';
 import { MaterialsModule } from './modules/materials/materials.module';
 import { SchoolModule } from './practices/1-ngModule/5-ngModule/school.module';
 import { GioModule } from './practices/1-ngModule/9-ngModule/gio.module';
+import { TempateSyntax1Module } from './practices/2-template-syntax/1-tempate-syntax/tempate-syntax-1.module';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { GioModule } from './practices/1-ngModule/9-ngModule/gio.module';
     MaterialsModule,
     SchoolModule,
     GioModule,
+    TempateSyntax1Module,
 
 
     NgSelectModule,
