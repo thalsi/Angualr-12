@@ -79,6 +79,10 @@ const routes: Routes = [
   {
     path:'tempate-syntax',
     loadChildren:() => import('./practices/2-template-syntax/1-tempate-syntax/tempate-syntax-1.module').then(m=>m.TempateSyntax1Module)
+  },
+  {
+    path:'',
+    loadChildren:() => import('./Angular-13/angular-13.module').then(m=>m.Angular13Module)
   }
 ];
 

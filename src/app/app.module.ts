@@ -27,6 +27,7 @@ import { MaterialsModule } from './modules/materials/materials.module';
 import { SchoolModule } from './practices/1-ngModule/5-ngModule/school.module';
 import { GioModule } from './practices/1-ngModule/9-ngModule/gio.module';
 import { TempateSyntax1Module } from './practices/2-template-syntax/1-tempate-syntax/tempate-syntax-1.module';
+import { Angular13Module } from './Angular-13/angular-13.module';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,8 @@ import { TempateSyntax1Module } from './practices/2-template-syntax/1-tempate-sy
     SchoolModule,
     GioModule,
     TempateSyntax1Module,
+
+    Angular13Module,//Auglar 13
 
 
     NgSelectModule,
