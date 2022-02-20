@@ -63,26 +63,6 @@ const routes: Routes = [
   {
     path: 'materials',
     loadChildren: () => import('./modules/materials/materials.module').then(m => m.MaterialsModule)
-  },
-  {
-    path:'joke',
-    loadChildren: () => import('./practices/1-ngModule/8-ngModule/joke.module').then(m => m.JokeModule)
-  },
-  {
-    path:'jio',
-    loadChildren:() => import('./practices/1-ngModule/9-ngModule/gio.module').then(m =>m.GioModule)
-  },
-  {
-    path:'food',
-    loadChildren:() => import('./practices/1-ngModule/10-ngModule/food.module').then(m=> m.FoodModule)
-  },
-  {
-    path:'tempate-syntax',
-    loadChildren:() => import('./practices/2-template-syntax/1-tempate-syntax/tempate-syntax-1.module').then(m=>m.TempateSyntax1Module)
-  },
-  {
-    path:'',
-    loadChildren:() => import('./Angular-13/angular-13.module').then(m=>m.Angular13Module)
   }
 ];
 

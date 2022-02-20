@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TemplateSyntaxModule } from './modules/Template-syntax/template-syntax.module';
-import { PlayGroundComponent } from './play-ground/play-ground.component';
 import { ListComponent } from './list/list.component';
 import { DirectivesModule } from './modules/directives/directives.module';
 import { DecoratorModule } from './modules/decorator/decorator.module';
@@ -24,15 +23,10 @@ import { AnimationModule } from './modules/animation/animation.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CrudModule } from './crud/crud.module';
 import { MaterialsModule } from './modules/materials/materials.module';
-import { SchoolModule } from './practices/1-ngModule/5-ngModule/school.module';
-import { GioModule } from './practices/1-ngModule/9-ngModule/gio.module';
-import { TempateSyntax1Module } from './practices/2-template-syntax/1-tempate-syntax/tempate-syntax-1.module';
-import { Angular13Module } from './Angular-13/angular-13.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlayGroundComponent,
     ListComponent
   ],
   imports: [
@@ -52,13 +46,6 @@ import { Angular13Module } from './Angular-13/angular-13.module';
     AnimationModule,
     CrudModule,
     MaterialsModule,
-    SchoolModule,
-    GioModule,
-    TempateSyntax1Module,
-
-    Angular13Module,//Auglar 13
-
-
     NgSelectModule,
     FormsModule,
     BrowserAnimationsModule
